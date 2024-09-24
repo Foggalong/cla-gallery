@@ -12,27 +12,27 @@ However, many papers which discuss MPT either do not include their test data or 
 
 ## Included Examples
 
-Dataset Name   | Assets | Time Steps | Time period         | Description                                  | License     | Sources
-:------------- | -----: | ---------: | :-----------------: | :------------------------------------------- | :---------: | :------
-StockIndex     |      6 |        240 | Jul 1991 - Jun 2011 | Monthly price data of stock indices          | [GPL v3+]   | [2]
-StockIndexAdj  |      6 |        240 | Jul 1991 - Jun 2011 | Adjusted monthly price data of stock indices | [GPL v3+]   | [2]
-StockIndexAdjD |      6 |       5202 | Jul 1991 - Jun 2011 | Adjusted daily price data of stock indices   | [GPL v3+]   | [2]
-ESCBFX         |      7 |       3427 | Jan 1999 - Apr 2012 | Daily rates of currencies against the [EUR]  | [GPL v3+]   | [2]
-MultiAsset     |     10 |         85 | Nov 2004 - Nov 2011 | Monthly stock and bond indices and [gold]    | [GPL v3+]   | [2]
-DowJones       |     28 |       1363 | Feb 1990 - Apr 2016 | Weekly [DJIA]                                | [CC-BY 4.0] | [1]
-INDTRACK1      |     31 |        291 | Mar 1991 - Sep 1997 | Weekly [HSI]                                 | [MIT]       | [4] [5]
-EuroStoxx50    |     48 |        265 | Mar 2003 - Mar 2008 | Weekly [EURO STOXX 50]                       | [Unknown]   | [3]
-FF49Industries |     49 |       2325 | Jul 1969 - Jul 2015 | Weekly [Fama and French] 49 Industry         | [CC-BY 4.0] | [1] [6]
-NASDAQ100      |     82 |        596 | Nov 2004 - Apr 2016 | Weekly [NASDAQ 100]                          | [CC-BY 4.0] | [1]
-FTSE100        |     83 |        717 | Jul 2002 - Apr 2016 | Weekly [FTSE 100]                            | [CC-BY 4.0] | [1]
-INDTRACK2      |     85 |        291 | Mar 1991 - Sep 1997 | Weekly [DAX 100]                             | [MIT]       | [4] [5]
-INDTRACK3      |     89 |        291 | Mar 1991 - Sep 1997 | Weekly [FTSE 100]                            | [MIT]       | [4] [5]
-INDTRACK4      |     98 |        291 | Mar 1991 - Sep 1997 | Weekly [S&P 100]                             | [MIT]       | [4] [5]
-INDTRACK5      |    225 |        291 | Mar 1991 - Sep 1997 | Weekly [Nikkei 225]                          | [MIT]       | [4] [5]
-MIBTEL         |    226 |        265 | Mar 2003 - Mar 2008 | Weekly [MIBTEL]                              | [Unknown]   | [3]
-SP500          |    442 |        595 | Nov 2004 - Apr 2016 | Weekly [S&P 500]                             | [CC-BY 4.0] | [1]
-INDTRACK6      |    457 |        291 | Mar 1991 - Sep 1997 | Weekly [S&P 500]                             | [MIT]       | [5]
-NASDAQComp     |   1203 |        685 | Feb 2003 - Apr 2016 | Weekly [NASDAQ Composite]                    | [CC-BY 4.0] | [1]
+Dataset Name     | Assets | Time Steps | Time period       | Description                                  | License     | Sources
+:--------------- | -----: | ---------: | :---------------: | :------------------------------------------- | :---------: | :------
+[`StockIndex`]     |      6 |        240 | 1991-07 - 2011-06 | Monthly price data of stock indices          | [GPL v3+]   | [2]
+[`StockIndexAdj`]  |      6 |        240 | 1991-07 - 2011-06 | Adjusted monthly price data of stock indices | [GPL v3+]   | [2]
+[`StockIndexAdjD`] |      6 |       5202 | 1991-07 - 2011-06 | Adjusted daily price data of stock indices   | [GPL v3+]   | [2]
+[`ESCBFX`]         |      7 |       3427 | 1999-01 - 2012-04 | Daily rates of currencies against the [EUR]  | [GPL v3+]   | [2]
+[`MultiAsset`]     |     10 |         85 | 2004-11 - 2011-11 | Monthly stock and bond indices and [gold]    | [GPL v3+]   | [2]
+[`DowJones`]       |     28 |       1363 | 1990-02 - 2016-04 | Weekly [DJIA]                                | [CC-BY 4.0] | [1]
+[`INDTRACK1`]      |     31 |        291 | 1991-03 - 1997-09 | Weekly [HSI]                                 | [MIT]       | [4] [5]
+[`EuroStoxx50`]    |     48 |        265 | 2003-03 - 2008-03 | Weekly [EURO STOXX 50]                       | [Unknown]   | [3]
+[`FF49Industries`] |     49 |       2325 | 1969-07 - 2015-07 | Weekly [Fama and French] 49 Industry         | [CC-BY 4.0] | [1] [6]
+[`NASDAQ100`]      |     82 |        596 | 2004-11 - 2016-04 | Weekly [NASDAQ 100]                          | [CC-BY 4.0] | [1]
+[`FTSE100`]        |     83 |        717 | 2002-07 - 2016-04 | Weekly [FTSE 100]                            | [CC-BY 4.0] | [1]
+[`INDTRACK2`]      |     85 |        291 | 1991-03 - 1997-09 | Weekly [DAX 100]                             | [MIT]       | [4] [5]
+[`INDTRACK3`]      |     89 |        291 | 1991-03 - 1997-09 | Weekly [FTSE 100]                            | [MIT]       | [4] [5]
+[`INDTRACK4`]      |     98 |        291 | 1991-03 - 1997-09 | Weekly [S&P 100]                             | [MIT]       | [4] [5]
+[`INDTRACK5`]      |    225 |        291 | 1991-03 - 1997-09 | Weekly [Nikkei 225]                          | [MIT]       | [4] [5]
+[`MIBTEL`]         |    226 |        265 | 2003-03 - 2008-03 | Weekly [Borsa Italiana]                      | [Unknown]   | [3]
+[`SP500`]          |    442 |        595 | 2004-11 - 2016-04 | Weekly [S&P 500]                             | [CC-BY 4.0] | [1]
+[`INDTRACK6`]      |    457 |        291 | 1991-03 - 1997-09 | Weekly [S&P 500]                             | [MIT]       | [5]
+[`NASDAQComp`]     |   1203 |        685 | 2003-03 - 2016-04 | Weekly [NASDAQ Composite]                    | [CC-BY 4.0] | [1]
 
 ## File Formats
 
@@ -101,7 +101,7 @@ which corresponds to the first few entries in a matrix
 $$
 \Sigma = \begin{bmatrix}
     1.000000 & 0.562289 & 0.746125 & 0.707857 & 0.336386 & \ldots \\
-    \vdots   & \vdots   & \vdots   & \vdots   & \vdots   & \vdots
+    \vdots   & \vdots   & \vdots   & \vdots   & \vdots   & \ddots
 \end{bmatrix}
 $$
 
@@ -151,9 +151,30 @@ If you notice any errors in the included files, can provide an update to an exis
 [FTSE 100]: https://en.wikipedia.org/wiki/FTSE_100_Index
 [gold]: https://en.wikipedia.org/wiki/Gold#Monetary_use
 [HSI]: https://en.wikipedia.org/wiki/Hang_Seng_Index
-[MIBTEL]: https://en.wikipedia.org/wiki/MIBTel
+[Borsa Italiana]: https://en.wikipedia.org/wiki/MIBTel
 [NASDAQ 100]: https://en.wikipedia.org/wiki/Nasdaq-100
 [NASDAQ Composite]: https://en.wikipedia.org/wiki/Nasdaq_Composite
 [Nikkei 225]: https://en.wikipedia.org/wiki/Nikkei_225
 [S&P 100]: https://en.wikipedia.org/wiki/S%26P_100
 [S&P 500]: https://en.wikipedia.org/wiki/S%26P_500
+
+<!-- Internal dataset links -->
+[`StockIndex`]: Datasets/StockIndex
+[`StockIndexAdj`]: Datasets/StockIndexAdj
+[`StockIndexAdjD`]: Datasets/StockIndexAdjD
+[`ESCBFX`]: Datasets/ESCBFX
+[`MultiAsset`]: Datasets/MultiAsset
+[`DowJones`]: Datasets/DowJones
+[`INDTRACK1`]: Datasets/INDTRACK1
+[`EuroStoxx50`]: Datasets/EuroStoxx50
+[`FF49Industries`]: Datasets/FF49Industries
+[`NASDAQ100`]: Datasets/NASDAQ100
+[`FTSE100`]: Datasets/FTSE100
+[`INDTRACK2`]: Datasets/INDTRACK2
+[`INDTRACK3`]: Datasets/INDTRACK3
+[`INDTRACK4`]: Datasets/INDTRACK4
+[`INDTRACK5`]: Datasets/INDTRACK5
+[`MIBTEL`]: Datasets/MIBTEL
+[`SP500`]: Datasets/SP500
+[`INDTRACK6`]: Datasets/INDTRACK6
+[`NASDAQComp`]: Datasets/NASDAQComp
