@@ -79,15 +79,43 @@ Every dataset includes a `return.csv` file encoding expected returns for each as
 
 ### Correlations
 
-Every dataset includes a `risk.csv` file encoding the covariances between each pair of assets. Where one was included with the original dataset, this has been retained. Otherwise, the covariance matrix is computed over 50 most recent time steps. The covariance matrix is stored in [sparse matrix coordinate format](https://en.wikipedia.org/wiki/Sparse_matrix#Coordinate_list_(COO)) (COO), where for each non-zero matrix entry the first column gives its row index (from 1), the second column its column index, and the third its matrix value. For example, the risk file for [`INDTRACK1`] begins
+Every dataset includes a `risk.csv` file encoding the covariances between each pair of assets. Where one was included with the original dataset, this has been retained. Otherwise, the covariance matrix is computed over 50 most recent time steps.
+
+For some problem, the covariance matrix is stored directly as a CSV. For example, [`Stanford3`] has the risk file
 
 ```csv
-0.0108650000,0.0047755010
-0.0108609579,0.0047677406
-0.0108569167,0.0047599943
-0.0108528746,0.0047522585
-0.0108488325,0.0047445351
+1.0,0.4,0.15
+0.4,1.0,0.35
+0.15,0.35,1.0
 ```
+
+which corresponds to the matrix
+
+$$
+\Sigma = \begin{bmatrix}
+    1.0 & 0.4 & 0.15 \\
+    0.4 & 1.0 & 0.35 \\
+    0.15 & 0.35 & 1.0
+\end{bmatrix}.
+$$
+
+For other problems, particularly where the covariance matrix has many zero entries, the covariance matrix is stored in [sparse matrix coordinate format](https://en.wikipedia.org/wiki/Sparse_matrix#Coordinate_list_(COO)). For each non-zero matrix entry, the first column gives its row index (from 1), the second column its column index, and the third its matrix value. For example, the risk file for [`Xu3`] is
+
+```csv
+1,1,5
+2,2,3
+3,3,2
+```
+
+which corresponds to the matrix
+
+$$
+\Sigma = \begin{bmatrix}
+    5 & 0 & 0 \\
+    0 & 3 & 0 \\
+    0 & 0 & 2
+\end{bmatrix}.
+$$
 
 ### Full Problem
 
@@ -104,28 +132,19 @@ C_21, C_22, ... , C_2n
 C_n1, C_n2, ... , C_nn
 ```
 
-where `mu` is the vector of respected returns, `lb` is the vector of lower weight bounds, `ub` is the vector of upper weight bounds, `and C_ij` is the (i, j)th entry of the covariance matrix. The first row gives identifying labels for each asset. For example, [`Xu3`] begins
+where `mu` is the vector of respected returns, `lb` is the vector of lower weight bounds, `ub` is the vector of upper weight bounds, `and C_ij` is the (i, j)th entry of the covariance matrix. The first row gives identifying labels for each asset.
 
 ### Efficient Frontiers
 
 Some datasets (though not all) include a `frontier.csv` file encoding the unconstrained efficient frontiers. Each row is a calculated point on the unconstrained frontier, with the first column being the mean return and the second being the variance of return. This file contains no headers or labels. For example, the efficient frontier for [`INDTRACK1`] begins
 
 ```csv
-1,1,1.000000
-1,2,0.562289
-1,3,0.746125
-1,4,0.707857
-1,5,0.336386
+0.0108650000,0.0047755010
+0.0108609579,0.0047677406
+0.0108569167,0.0047599943
+0.0108528746,0.0047522585
+0.0108488325,0.0047445351
 ```
-
-which corresponds to the first few entries in a matrix
-
-$$
-\Sigma = \begin{bmatrix}
-    1.000000 & 0.562289 & 0.746125 & 0.707857 & 0.336386 & \ldots \\
-    \vdots   & \vdots   & \vdots   & \vdots   & \vdots   & \ddots
-\end{bmatrix}
-$$
 
 ## Licenses
 
