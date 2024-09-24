@@ -1,0 +1,34 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: CLA Example Gallery
+message: >-
+  If you use this dataset, please cite it using the metadata
+  from this file.
+type: dataset
+authors:
+  - given-names: Josh
+    family-names: Fogg
+    email: j.fogg@ed.ac.uk
+    affiliation: University of Edinburgh
+    orcid: 'https://orcid.org/0009-0008-0088-2759'
+url: 'https://github.com/Foggalong/cla-gallery'
+abstract: >-
+  Markowitz' Critical Line Algorithm (CLA) explores the
+  Pareto frontier of a bi-objective optimization problem,
+  with many problems in modern portfolio theory (MPT)
+  building on this further. When developing algorithms and
+  software to explore these, it's important to have
+  realistic test problems to check against.
+
+
+  However, many papers which discuss MPT either do not
+  include their test data or reference datasets which are no
+  longer available. To save others the time, here's a
+  collation of relevant datasets.
+keywords:
+  - markowitz
+  - mpt
+  - critical-line-algorithm
+  - portfolio-optimization

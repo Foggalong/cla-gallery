@@ -156,6 +156,8 @@ If you notice any errors in the included files, can provide an update to an exis
 
 ## Sources
 
+If you feel the need to cite this repository, see the "Cite this repository" button in the GitHub sidebar. More appropriately though, below are the original sources of the included datasets:
+
 1. Harry M. Markowitz (1987), _Mean-Variance Analysis in Portfolio Choice and Capital Markets_, B. Blackwell. ISBN: 0-631-15381-0.
 
 2. Xu Shuhan (March 2020), _Exploring Efficient Frontier in Portfolio Analysis_, dissertation completed in part towards a degree at the University of Edinburgh, supervised by Julian Hall.
