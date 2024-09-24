@@ -1,3 +1,5 @@
 # `INDTRACK5`
 
 Based on a timeseries of weekly Nikkei 225 asset prices, from 1991-03 to 1997-09, split into 291 time steps. Exact time steps are unknown and asset labels have been anonymised.
+
+The `return` and `risk` CSVs included are from the original dataset, not computed here anew for this repository.
