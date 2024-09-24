@@ -14,26 +14,30 @@ However, many papers which discuss MPT either do not include their test data or 
 
 Dataset Name       | Assets | Description                              | License     | Sources
 :----------------- | -----: | :--------------------------------------- | :---------: | :------
-[`StockIndex`]     |      6 | Monthly prices of stock indices          | [GPL v3+]   | [3]
-[`StockIndexAdj`]  |      6 | Adjusted monthly prices of stock indices | [GPL v3+]   | [3]
-[`StockIndexAdjD`] |      6 | Adjusted daily prices of stock indices   | [GPL v3+]   | [3]
-[`ESCBFX`]         |      7 | Currency rates against the [EUR]         | [GPL v3+]   | [3]
+[`Xu2`]            |      2 | Simple two asset problem                 | [MIT]       | [2]
+[`Xu3`]            |      3 | Simple three asset problem               | [MIT]       | [2]
+[`Stanford3`]      |      3 | Three assets with non-integer bounds     | [Unknown]   | [3]
+[`Full5`]          |      5 | Small, but more-fully explores CLA       | [MIT]       | Original
+[`StockIndex`]     |      6 | Monthly prices of stock indices          | [GPL v3+]   | [5]
+[`StockIndexAdj`]  |      6 | Adjusted monthly prices of stock indices | [GPL v3+]   | [5]
+[`StockIndexAdjD`] |      6 | Adjusted daily prices of stock indices   | [GPL v3+]   | [5]
+[`ESCBFX`]         |      7 | Currency rates against the [EUR]         | [GPL v3+]   | [5]
 [`Markowitz`]      |     10 | Markowitz' original ten asset problem    | [Unknown]   | [1]
-[`DowJones`]       |     28 | [DJIA] asset prices                      | [CC-BY 4.0] | [2]
-[`MultiAsset`]     |     10 | Stock and bond indices against [gold]    | [GPL v3+]   | [3]
-[`INDTRACK1`]      |     31 | [HSI] asset prices                       | [MIT]       | [5] [6]
-[`EuroStoxx50`]    |     48 | [EURO STOXX 50] asset prices             | [Unknown]   | [4]
-[`FF49Industries`] |     49 | [Fama and French] 49 Industry prices     | [CC-BY 4.0] | [2] [7]
-[`NASDAQ100`]      |     82 | [NASDAQ 100] asset prices                | [CC-BY 4.0] | [2]
-[`FTSE100`]        |     83 | [FTSE 100] asset prices                  | [CC-BY 4.0] | [2]
-[`INDTRACK2`]      |     85 | [DAX 100] asset prices                   | [MIT]       | [5] [6]
-[`INDTRACK3`]      |     89 | [FTSE 100] asset prices                  | [MIT]       | [5] [6]
-[`INDTRACK4`]      |     98 | [S&P 100] asset prices                   | [MIT]       | [5] [6]
-[`INDTRACK5`]      |    225 | [Nikkei 225] asset prices                | [MIT]       | [5] [6]
-[`MIBTEL`]         |    226 | [Borsa Italiana] asset prices            | [Unknown]   | [4]
-[`SP500`]          |    442 | [S&P 500] asset prices                   | [CC-BY 4.0] | [2]
-[`INDTRACK6`]      |    457 | [S&P 500] asset prices                   | [MIT]       | [6]
-[`NASDAQComp`]     |   1203 | [NASDAQ Composite] asset prices          | [CC-BY 4.0] | [2]
+[`MultiAsset`]     |     10 | Stock and bond indices against [gold]    | [GPL v3+]   | [5]
+[`DowJones`]       |     28 | [DJIA] asset prices                      | [CC-BY 4.0] | [4]
+[`INDTRACK1`]      |     31 | [HSI] asset prices                       | [MIT]       | [7] [8]
+[`EuroStoxx50`]    |     48 | [EURO STOXX 50] asset prices             | [Unknown]   | [6]
+[`FF49Industries`] |     49 | [Fama and French] 49 Industry prices     | [CC-BY 4.0] | [4] [9]
+[`NASDAQ100`]      |     82 | [NASDAQ 100] asset prices                | [CC-BY 4.0] | [4]
+[`FTSE100`]        |     83 | [FTSE 100] asset prices                  | [CC-BY 4.0] | [4]
+[`INDTRACK2`]      |     85 | [DAX 100] asset prices                   | [MIT]       | [7] [8]
+[`INDTRACK3`]      |     89 | [FTSE 100] asset prices                  | [MIT]       | [7] [8]
+[`INDTRACK4`]      |     98 | [S&P 100] asset prices                   | [MIT]       | [7] [8]
+[`INDTRACK5`]      |    225 | [Nikkei 225] asset prices                | [MIT]       | [7] [8]
+[`MIBTEL`]         |    226 | [Borsa Italiana] asset prices            | [Unknown]   | [6]
+[`SP500`]          |    442 | [S&P 500] asset prices                   | [CC-BY 4.0] | [4]
+[`INDTRACK6`]      |    457 | [S&P 500] asset prices                   | [MIT]       | [8]
+[`NASDAQComp`]     |   1203 | [NASDAQ Composite] asset prices          | [CC-BY 4.0] | [4]
 
 ## File Formats
 
@@ -135,17 +139,21 @@ If you notice any errors in the included files, can provide an update to an exis
 
 1. Harry M. Markowitz (1987), _Mean-Variance Analysis in Portfolio Choice and Capital Markets_, B. Blackwell. ISBN: 0-631-15381-0.
 
-2. Renato Bruni, Francesco Cesarone, Andrea Scozzari, and Fabio Tardella (September 2016), _Real-world datasets for portfolio selection and solutions of some stochastic dominance portfolio models_ in Data in Brief, Volume 8, Pages 858-862. ISSN: 2352-3409. DOI: [10.1016/j.dib.2016.06.031]. Data was constructed using a combination of information from _Thomson Reuters Datastream_ and the _Fama & French Data Library_, then checked to correct missing or inaccurate values.
+2. Xu Shuhan (March 2020), _Exploring Efficient Frontier in Portfolio Analysis_, dissertation completed in part towards a degree at the University of Edinburgh, supervised by Julian Hall.
 
-3. Bernhard Pfaff (December 2012), _FRAPO: Financial Risk Modelling and Portfolio Optimisation with R_ in CRAN (Comprehensive R Archive Network), version 0.4. DOI: [10.32614/CRAN.package.FRAPO]. The FRAPO package [3] also includes dataset called `FTSE100`, `NASDAQ`, and `SP500`. These are all drawn from [4] and are (presumably) outdated versions of what are included in [2], so have been omitted here.
+3. William F. Sharpe (May 1999), _The Critical Line Method_ within _Macro-Investment Analysis_, an incomplete book published [online] at Stanford University.
 
-4. Francesco Cesarone, Andrea Scozzari, and Fabio Tardella (July 2015), _Linear vs. quadratic portfolio selection models with hard real-world constraints_ in Computer Management Science, Volume 12, Pages 345-370. DOI: [10.1007/s10287-014-0210-1]. This paper, via reference to [another], mentions additional datasets from [S&P 500] with 476 assets and one from [NASDAQ][NASDAQ Composite] which includes 2196 assets. However, these have been lost due to link rot.
+4. Renato Bruni, Francesco Cesarone, Andrea Scozzari, and Fabio Tardella (September 2016), _Real-world datasets for portfolio selection and solutions of some stochastic dominance portfolio models_ in Data in Brief, Volume 8, Pages 858-862. ISSN: 2352-3409. DOI: [10.1016/j.dib.2016.06.031]. Data was constructed using a combination of information from _Thomson Reuters Datastream_ and the _Fama & French Data Library_, then checked to correct missing or inaccurate values.
 
-5. T.-J. Chang, Nigel Meade, John E. Beasley, and Yazid M. Sharaiha (2000), _Heuristics for cardinality constrained portfolio optimisation_ in Computers & Operations Research, Volume 27, Pages 1271-1302. DOI: [10.1016/S0305-0548(99)00074-X].
+5. Bernhard Pfaff (December 2012), _FRAPO: Financial Risk Modelling and Portfolio Optimisation with R_ in CRAN (Comprehensive R Archive Network), version 0.4. DOI: [10.32614/CRAN.package.FRAPO]. The FRAPO package [5] also includes dataset called `FTSE100`, `NASDAQ`, and `SP500`. These are all drawn from [6] and are (presumably) outdated versions of what are included in [4], so have been omitted here.
 
-6. Nilgun A. Canakgoz and John E. Beasley (July 2009), _Mixed-integer programming approaches for index tracking and enhanced indexation_ in European Journal of Operational Research, Volume 196, Pages 384-399. DOI: [10.1016/j.ejor.2008.03.015]
+6. Francesco Cesarone, Andrea Scozzari, and Fabio Tardella (July 2015), _Linear vs. quadratic portfolio selection models with hard real-world constraints_ in Computer Management Science, Volume 12, Pages 345-370. DOI: [10.1007/s10287-014-0210-1]. This paper, via reference to [another], mentions additional datasets from [S&P 500] with 476 assets and one from [NASDAQ][NASDAQ Composite] which includes 2196 assets. However, these have been lost due to link rot.
 
-7. Eugene F. Fama and Kenneth R. French (December 2023), _Production of U.S. Rm-Rf, SMB, and HML in the Fama-French Data Library_ in Chicago Booth Research Paper, No. 23-22, Fama-Miller Working Paper. DOI: [10.2139/ssrn.4629613]. Through [Fama and French] a more up to date version of this dataset could be obtained, though lacking the adjustments made by Bruni _et al._ [2].
+7. T.-J. Chang, Nigel Meade, John E. Beasley, and Yazid M. Sharaiha (2000), _Heuristics for cardinality constrained portfolio optimisation_ in Computers & Operations Research, Volume 27, Pages 1271-1302. DOI: [10.1016/S0305-0548(99)00074-X].
+
+8. Nilgun A. Canakgoz and John E. Beasley (July 2009), _Mixed-integer programming approaches for index tracking and enhanced indexation_ in European Journal of Operational Research, Volume 196, Pages 384-399. DOI: [10.1016/j.ejor.2008.03.015]
+
+9. Eugene F. Fama and Kenneth R. French (December 2023), _Production of U.S. Rm-Rf, SMB, and HML in the Fama-French Data Library_ in Chicago Booth Research Paper, No. 23-22, Fama-Miller Working Paper. DOI: [10.2139/ssrn.4629613]. Through [Fama and French] a more up to date version of this dataset could be obtained, though lacking the adjustments made by Bruni _et al._ [4].
 
 <!-- License Links -->
 [CC-BY 4.0]: https://creativecommons.org/licenses/by/4.0/
@@ -161,6 +169,7 @@ If you notice any errors in the included files, can provide an update to an exis
 [10.2139/ssrn.4629613]: https://dx.doi.org/10.2139/ssrn.4629613
 [10.1016/S0305-0548(99)00074-X]: https://doi.org/10.1016/S0305-0548(99)00074-X
 [another]: https://doi.org/10.1016/j.eswa.2011.04.233
+[online]: https://web.stanford.edu/~wfsharpe/mia/mia.htm
 
 <!-- Stock Exchange definitions -->
 [DAX 100]: https://en.wikipedia.org/wiki/HDAX
@@ -184,6 +193,7 @@ If you notice any errors in the included files, can provide an update to an exis
 [`EuroStoxx50`]: Datasets/EuroStoxx50
 [`FF49Industries`]: Datasets/FF49Industries
 [`FTSE100`]: Datasets/FTSE100
+[`Full5`]: Datasets/Full5
 [`INDTRACK1`]: Datasets/INDTRACK1
 [`INDTRACK2`]: Datasets/INDTRACK2
 [`INDTRACK3`]: Datasets/INDTRACK3
@@ -196,6 +206,9 @@ If you notice any errors in the included files, can provide an update to an exis
 [`NASDAQ100`]: Datasets/NASDAQ100
 [`NASDAQComp`]: Datasets/NASDAQComp
 [`SP500`]: Datasets/SP500
+[`Stanford3`]: Datasets/Stanford3
 [`StockIndex`]: Datasets/StockIndex
 [`StockIndexAdj`]: Datasets/StockIndexAdj
 [`StockIndexAdjD`]: Datasets/StockIndexAdjD
+[`Xu2`]: Datasets/Xu2
+[`Xu3`]: Datasets/Xu3
