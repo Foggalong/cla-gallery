@@ -18,6 +18,7 @@ Dataset Name       | Assets | Description                              | License
 [`StockIndexAdj`]  |      6 | Adjusted monthly prices of stock indices | [GPL v3+]   | [3]
 [`StockIndexAdjD`] |      6 | Adjusted daily prices of stock indices   | [GPL v3+]   | [3]
 [`ESCBFX`]         |      7 | Currency rates against the [EUR]         | [GPL v3+]   | [3]
+[`Markowitz`]      |     10 | Markowitz' original ten asset problem    | [Unknown]   | [1]
 [`DowJones`]       |     28 | [DJIA] asset prices                      | [CC-BY 4.0] | [2]
 [`MultiAsset`]     |     10 | Stock and bond indices against [gold]    | [GPL v3+]   | [3]
 [`INDTRACK1`]      |     31 | [HSI] asset prices                       | [MIT]       | [5] [6]
@@ -83,6 +84,23 @@ Every dataset includes a `risk.csv` file encoding the covariances between each p
 0.0108528746,0.0047522585
 0.0108488325,0.0047445351
 ```
+
+### Full Problem
+
+Some datasets (though not all) include a `problem.csv` file encoding all the main problem variables. The structure of the datafile is
+
+```csv
+S1,   S2,   ... , Sn
+mu_1, mu_2, ... , mu_n
+lb_1, lb_2, ... , lb_n
+ub_1, ub_2, ... , ub_n
+C_11, C_12, ... , C_1n
+C_21, C_22, ... , C_2n
+ .. ,  .. , ... ,  ..
+C_n1, C_n2, ... , C_nn
+```
+
+where `mu` is the vector of respected returns, `lb` is the vector of lower weight bounds, `ub` is the vector of upper weight bounds, `and C_ij` is the (i, j)th entry of the covariance matrix. The first row gives identifying labels for each asset. For example, [`Xu3`] begins
 
 ### Efficient Frontiers
 
@@ -173,6 +191,7 @@ If you notice any errors in the included files, can provide an update to an exis
 [`INDTRACK5`]: Datasets/INDTRACK5
 [`INDTRACK6`]: Datasets/INDTRACK6
 [`MIBTEL`]: Datasets/MIBTEL
+[`Markowitz`]: Datasets/Markowitz
 [`MultiAsset`]: Datasets/MultiAsset
 [`NASDAQ100`]: Datasets/NASDAQ100
 [`NASDAQComp`]: Datasets/NASDAQComp
