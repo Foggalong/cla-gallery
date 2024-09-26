@@ -12,32 +12,32 @@ However, many papers which discuss MPT either do not include their test data or 
 
 ## Included Examples
 
-Dataset Name       | Assets | Description                              | License     | Sources
-:----------------- | -----: | :--------------------------------------- | :---------: | :------
-[`Xu2`]            |      2 | Simple two asset problem                 | [MIT]       | [2]
-[`Xu3`]            |      3 | Simple three asset problem               | [MIT]       | [2]
-[`Stanford3`]      |      3 | Three assets with non-integer bounds     | [Unknown]   | [3]
-[`Full5`]          |      5 | Small, but more-fully explores CLA       | [MIT]       | Original
-[`StockIndex`]     |      6 | Monthly prices of stock indices          | [GPL v3+]   | [5]
-[`StockIndexAdj`]  |      6 | Adjusted monthly prices of stock indices | [GPL v3+]   | [5]
-[`StockIndexAdjD`] |      6 | Adjusted daily prices of stock indices   | [GPL v3+]   | [5]
-[`ESCBFX`]         |      7 | Currency rates against the [EUR]         | [GPL v3+]   | [5]
-[`Markowitz`]      |     10 | Markowitz' original ten asset problem    | [Unknown]   | [1]
-[`MultiAsset`]     |     10 | Stock and bond indices against [gold]    | [GPL v3+]   | [5]
-[`DowJones`]       |     28 | [DJIA] asset prices                      | [CC-BY 4.0] | [4]
-[`INDTRACK1`]      |     31 | [HSI] asset prices                       | [MIT]       | [7] [8]
-[`EuroStoxx50`]    |     48 | [EURO STOXX 50] asset prices             | [Unknown]   | [6]
-[`FF49Industries`] |     49 | [Fama and French] 49 Industry prices     | [CC-BY 4.0] | [4] [9]
-[`NASDAQ100`]      |     82 | [NASDAQ 100] asset prices                | [CC-BY 4.0] | [4]
-[`FTSE100`]        |     83 | [FTSE 100] asset prices                  | [CC-BY 4.0] | [4]
-[`INDTRACK2`]      |     85 | [DAX 100] asset prices                   | [MIT]       | [7] [8]
-[`INDTRACK3`]      |     89 | [FTSE 100] asset prices                  | [MIT]       | [7] [8]
-[`INDTRACK4`]      |     98 | [S&P 100] asset prices                   | [MIT]       | [7] [8]
-[`INDTRACK5`]      |    225 | [Nikkei 225] asset prices                | [MIT]       | [7] [8]
-[`MIBTEL`]         |    226 | [Borsa Italiana] asset prices            | [Unknown]   | [6]
-[`SP500`]          |    442 | [S&P 500] asset prices                   | [CC-BY 4.0] | [4]
-[`INDTRACK6`]      |    457 | [S&P 500] asset prices                   | [MIT]       | [8]
-[`NASDAQComp`]     |   1203 | [NASDAQ Composite] asset prices          | [CC-BY 4.0] | [4]
+Dataset Name       | Assets | `cond(A)` | Description                              | License     | Sources
+:----------------- | -----: | --------: | :--------------------------------------- | :---------: | :------
+[`Xu2`]            |      2 |         2 | Simple two asset problem                 | [MIT]       | [2]
+[`Xu3`]            |      3 |         3 | Simple three asset problem               | [MIT]       | [2]
+[`Stanford3`]      |      3 |         3 | Three assets with non-integer bounds     | [Unknown]   | [3]
+[`Full5`]          |      5 |       251 | Small, but more-fully explores CLA       | [MIT]       | Original
+[`StockIndex`]     |      6 |    [FAIL] | Monthly prices of stock indices          | [GPL v3+]   | [5]
+[`StockIndexAdj`]  |      6 |    [FAIL] | Adjusted monthly prices of stock indices | [GPL v3+]   | [5]
+[`StockIndexAdjD`] |      6 |     13696 | Adjusted daily prices of stock indices   | [GPL v3+]   | [5]
+[`ESCBFX`]         |      7 | 154786903 | Currency rates against the [EUR]         | [GPL v3+]   | [5]
+[`Markowitz`]      |     10 |         9 | Markowitz' original ten asset problem    | [Unknown]   | [1]
+[`MultiAsset`]     |     10 |    [FAIL] | Stock and bond indices against [gold]    | [GPL v3+]   | [5]
+[`DowJones`]       |     28 |      1199 | [DJIA] asset prices                      | [CC-BY 4.0] | [4]
+[`INDTRACK1`]      |     31 |        18 | [HSI] asset prices                       | [MIT]       | [7] [8]
+[`EuroStoxx50`]    |     48 |  52823609 | [EURO STOXX 50] asset prices             | [Unknown]   | [6]
+[`FF49Industries`] |     49 |  44990390 | [Fama and French] 49 Industry prices     | [CC-BY 4.0] | [4] [9]
+[`NASDAQ100`]      |     82 |  **5e17** | [NASDAQ 100] asset prices                | [CC-BY 4.0] | [4]
+[`FTSE100`]        |     83 |  **3e17** | [FTSE 100] asset prices                  | [CC-BY 4.0] | [4]
+[`INDTRACK2`]      |     85 |        22 | [DAX 100] asset prices                   | [MIT]       | [7] [8]
+[`INDTRACK3`]      |     89 |        25 | [FTSE 100] asset prices                  | [MIT]       | [7] [8]
+[`INDTRACK4`]      |     98 |        19 | [S&P 100] asset prices                   | [MIT]       | [7] [8]
+[`INDTRACK5`]      |    225 |      129¹ | [Nikkei 225] asset prices                | [MIT]       | [7] [8]
+[`MIBTEL`]         |    226 |  **4e34** | [Borsa Italiana] asset prices            | [Unknown]   | [6]
+[`SP500`]          |    442 |  **4e20** | [S&P 500] asset prices                   | [CC-BY 4.0] | [4]
+[`INDTRACK6`]      |    457 |  **1e20** | [S&P 500] asset prices                   | [MIT]       | [8]
+[`NASDAQComp`]     |   1203 |    [FAIL] | [NASDAQ Composite] asset prices          | [CC-BY 4.0] | [4]
 
 ## File Formats
 
