@@ -12,32 +12,38 @@ However, many papers which discuss MPT either do not include their test data or 
 
 ## Included Examples
 
-Dataset Name       | Assets | `cond(A)` | Description                              | License     | Sources
-:----------------- | -----: | --------: | :--------------------------------------- | :---------: | :------
-[`Xu2`]            |      2 |         2 | Simple two asset problem                 | [MIT]       | [2]
-[`Xu3`]            |      3 |         3 | Simple three asset problem               | [MIT]       | [2]
-[`Stanford3`]      |      3 |         3 | Three assets with non-integer bounds     | [Unknown]   | [3]
-[`Full5`]          |      5 |       251 | Small, but more-fully explores CLA       | [MIT]       | Original
-[`StockIndex`]     |      6 |    [FAIL] | Monthly prices of stock indices          | [GPL v3+]   | [5]
-[`StockIndexAdj`]  |      6 |    [FAIL] | Adjusted monthly prices of stock indices | [GPL v3+]   | [5]
-[`StockIndexAdjD`] |      6 |     13696 | Adjusted daily prices of stock indices   | [GPL v3+]   | [5]
-[`ESCBFX`]         |      7 | 154786903 | Currency rates against the [EUR]         | [GPL v3+]   | [5]
-[`Markowitz`]      |     10 |         9 | Markowitz' original ten asset problem    | [Unknown]   | [1]
-[`MultiAsset`]     |     10 |    [FAIL] | Stock and bond indices against [gold]    | [GPL v3+]   | [5]
-[`DowJones`]       |     28 |      1199 | [DJIA] asset prices                      | [CC-BY 4.0] | [4]
-[`INDTRACK1`]      |     31 |        18 | [HSI] asset prices                       | [MIT]       | [7] [8]
-[`EuroStoxx50`]    |     48 |  52823609 | [EURO STOXX 50] asset prices             | [Unknown]   | [6]
-[`FF49Industries`] |     49 |  44990390 | [Fama and French] 49 Industry prices     | [CC-BY 4.0] | [4] [9]
-[`NASDAQ100`]      |     82 |  **5e17** | [NASDAQ 100] asset prices                | [CC-BY 4.0] | [4]
-[`FTSE100`]        |     83 |  **3e17** | [FTSE 100] asset prices                  | [CC-BY 4.0] | [4]
-[`INDTRACK2`]      |     85 |        22 | [DAX 100] asset prices                   | [MIT]       | [7] [8]
-[`INDTRACK3`]      |     89 |        25 | [FTSE 100] asset prices                  | [MIT]       | [7] [8]
-[`INDTRACK4`]      |     98 |        19 | [S&P 100] asset prices                   | [MIT]       | [7] [8]
-[`INDTRACK5`]      |    225 |      129¹ | [Nikkei 225] asset prices                | [MIT]       | [7] [8]
-[`MIBTEL`]         |    226 |  **4e34** | [Borsa Italiana] asset prices            | [Unknown]   | [6]
-[`SP500`]          |    442 |  **4e20** | [S&P 500] asset prices                   | [CC-BY 4.0] | [4]
-[`INDTRACK6`]      |    457 |  **1e20** | [S&P 500] asset prices                   | [MIT]       | [8]
-[`NASDAQComp`]     |   1203 |    [FAIL] | [NASDAQ Composite] asset prices          | [CC-BY 4.0] | [4]
+Below is a table with basic information about the examples included in this gallery. The "cond" column gives the [condition number](https://en.wikipedia.org/wiki/Condition_number) of the covariance matrix $\Sigma$. Recall that higher condition numbers (such as those highlighted in **bold**) mean the problem is sensitive to minor changes in input, negatively impacting the accuracy of any solutions.
+
+Dataset Name       | Assets |      Cond. | Description                              | License     | Sources
+:----------------- | -----: | ---------: | :--------------------------------------- | :---------: | :------
+[`Xu2`]            |      2 |          2 | Simple two asset problem                 | [MIT]       | [2]
+[`Xu3`]            |      3 |          3 | Simple three asset problem               | [MIT]       | [2]
+[`Stanford3`]      |      3 |          3 | Three assets with non-integer bounds     | [Unknown]   | [3]
+[`Full5`]          |      5 |        251 | Small, but more-fully explores CLA       | [MIT]       | Original
+[`StockIndex`]     |      6 |     25875¹ | Monthly prices of stock indices          | [GPL v3+]   | [5]
+[`StockIndexAdj`]  |      6 |     25875¹ | Adjusted monthly prices of stock indices | [GPL v3+]   | [5]
+[`StockIndexAdjD`] |      6 |     13696² | Adjusted daily prices of stock indices   | [GPL v3+]   | [5]
+[`ESCBFX`]         |      7 | **1.5e8**² | Currency rates against the [EUR]         | [GPL v3+]   | [5]
+[`Markowitz`]      |     10 |          9 | Markowitz' original ten asset problem    | [Unknown]   | [1]
+[`MultiAsset`]     |     10 | **3.4e6**¹ | Stock and bond indices against [gold]    | [GPL v3+]   | [5]
+[`DowJones`]       |     28 |       1199 | [DJIA] asset prices                      | [CC-BY 4.0] | [4]
+[`INDTRACK1`]      |     31 |        18² | [HSI] asset prices                       | [MIT]       | [7] [8]
+[`EuroStoxx50`]    |     48 |  **5.3e7** | [EURO STOXX 50] asset prices             | [Unknown]   | [6]
+[`FF49Industries`] |     49 |  **4.5e7** | [Fama and French] 49 Industry prices     | [CC-BY 4.0] | [4] [9]
+[`NASDAQ100`]      |     82 |   **5e17** | [NASDAQ 100] asset prices                | [CC-BY 4.0] | [4]
+[`FTSE100`]        |     83 |   **3e17** | [FTSE 100] asset prices                  | [CC-BY 4.0] | [4]
+[`INDTRACK2`]      |     85 |        22² | [DAX 100] asset prices                   | [MIT]       | [7] [8]
+[`INDTRACK3`]      |     89 |        25² | [FTSE 100] asset prices                  | [MIT]       | [7] [8]
+[`INDTRACK4`]      |     98 |        19² | [S&P 100] asset prices                   | [MIT]       | [7] [8]
+[`INDTRACK5`]      |    225 |       129² | [Nikkei 225] asset prices                | [MIT]       | [7] [8]
+[`MIBTEL`]         |    226 |   **4e34** | [Borsa Italiana] asset prices            | [Unknown]   | [6]
+[`SP500`]          |    442 |   **4e20** | [S&P 500] asset prices                   | [CC-BY 4.0] | [4]
+[`INDTRACK6`]      |    457 |   **1e20** | [S&P 500] asset prices                   | [MIT]       | [8]
+[`NASDAQComp`]     |   1203 |  **9e19¹** | [NASDAQ Composite] asset prices          | [CC-BY 4.0] | [4]
+
+¹ These datasets produced a fatal error of some description when used in [OctCLA].
+
+² [OctCLA] produces invalid turning points (e.g. including negative weights) while passing the partitioned KKTs.
 
 ## File Formats
 
@@ -134,6 +140,16 @@ C_n1, C_n2, ... , C_nn
 
 where `mu` is the vector of respected returns, `lb` is the vector of lower weight bounds, `ub` is the vector of upper weight bounds, `and C_ij` is the (i, j)th entry of the covariance matrix. The first row gives identifying labels for each asset.
 
+### Turning Points
+
+Most datasets (though not all) include an `output.csv` file encoding the portfolios which are turning points on the unconstrained efficient frontiers. These were computed using [OctCLA]. Each row is a calculated point on the unconstrained frontier, with one asset per column. This file contains no headers or labels. For example, the turning points for [`Xu3`] are
+
+```csv
+0.9999999999999998,0,0
+0.7058823529411764,0.2941176470588234,0
+0.1935483870967742,0.3225806451612904,0.4838709677419356
+```
+
 ### Efficient Frontiers
 
 Some datasets (though not all) include a `frontier.csv` file encoding the unconstrained efficient frontiers. Each row is a calculated point on the unconstrained frontier, with the first column being the mean return and the second being the variance of return. This file contains no headers or labels. For example, the efficient frontier for [`INDTRACK1`] begins
@@ -191,6 +207,7 @@ If you feel the need to cite this repository, see the "Cite this repository" but
 [10.1016/S0305-0548(99)00074-X]: https://doi.org/10.1016/S0305-0548(99)00074-X
 [another]: https://doi.org/10.1016/j.eswa.2011.04.233
 [online]: https://web.stanford.edu/~wfsharpe/mia/mia.htm
+[OctCLA]: https://github.com/Foggalong/octcla
 
 <!-- Stock Exchange definitions -->
 [DAX 100]: https://en.wikipedia.org/wiki/HDAX
