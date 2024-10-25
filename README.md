@@ -132,7 +132,7 @@ C_21, C_22, ... , C_2n
 C_n1, C_n2, ... , C_nn
 ```
 
-where `mu` is the vector of respected returns, `lb` is the vector of lower weight bounds, `ub` is the vector of upper weight bounds, `and C_ij` is the (i, j)th entry of the covariance matrix. The first row gives identifying labels for each asset.
+where `mu` is the vector of respected returns, `lb` is the vector of lower weight bounds, `ub` is the vector of upper weight bounds, and `C_ij` is the (i, j)th entry of the covariance matrix. The first row gives identifying labels for each asset.
 
 ### Efficient Frontiers
 
